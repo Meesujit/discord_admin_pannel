@@ -1,26 +1,123 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* globals.css */
+
+.bg-discord-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 15 35 / var(--tw-bg-opacity, 1));
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.text-discord-accent {
+    --tw-text-opacity: 1;
+    color: rgb(99 102 241 / var(--tw-text-opacity, 1)) /* #6366f1 */;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.bg-discord-accent\/20 {
+    background-color: rgb(99 102 241 / 0.2);
+}
+
+.bg-discord-darker\/50 {
+    background-color: rgb(26 26 46 / 0.5);
+}
+
+.border-discord-accent\/10 {
+    border-color: rgb(99 102 241 / 0.1);
+}
+
+.border-discord-accent\/20 {
+    border-color: rgb(99 102 241 / 0.2);
+}
+
+.border-discord-accent\/30 {
+    border-color: rgb(99 102 241 / 0.3);
+}
+
+.hover\:bg-discord-accent\/10:hover {
+    background-color: rgb(99 102 241 / 0.1);
+}
+
+.hover\:bg-discord-accent\/5:hover {
+    background-color: rgb(99 102 241 / 0.05);
+}
+
+.hover\:border-discord-accent\/40:hover {
+    border-color: rgb(99 102 241 / 0.4);
+}
+
+.focus\:border-discord-accent:focus {
+    --tw-border-opacity: 1;
+    border-color: rgb(99 102 241 / var(--tw-border-opacity, 1)) /* #6366f1 */;
+}
+
+.bg-discord-accent {
+    --tw-bg-opacity: 1;
+    background-color: rgb(99 102 241 / var(--tw-bg-opacity, 1)) /* #6366f1 */;
+}
+
+.bg-discord-gradient {
+    background-image: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+.peer:focus ~ .peer-focus\:ring-discord-accent\/20 {
+    --tw-ring-color: rgb(99 102 241 / 0.2);
+}
+
+.peer:checked ~ .peer-checked\:bg-discord-accent {
+    --tw-bg-opacity: 1;
+    background-color: rgb(99 102 241 / var(--tw-bg-opacity, 1)) /* #6366f1 */;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* same as Tailwind gap-3 */
+  padding: 0.75rem 1rem; /* same as px-4 py-3 */
+  border-radius: 0.5rem; /* same as rounded-lg */
+  transition: all 0.2s ease;
+  color: #d1d5db; /* Tailwind's text-gray-300 */
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background-color: rgba(88, 101, 242, 0.1); /* hover:bg-discord-accent/10 */
+  border-left: 4px solid #5865f2; /* hover:border-discord-accent */
+}
+
+.nav-item.active {
+  background-color: rgba(88, 101, 242, 0.2); /* bg-discord-accent/20 */
+  border-left: 4px solid #5865f2; /* border-discord-accent */
+  color: #5865f2; /* text-discord-accent */
+}
+
+.glass-card {
+  background-color: rgba(26, 26, 46, 0.5); /* bg-discord-card/50 */
+  backdrop-filter: blur(8px);             /* backdrop-blur-sm */
+  border: 1px solid rgba(88, 101, 242, 0.2); /* border-discord-accent/20 */
+  border-radius: 0.75rem;                 /* rounded-xl */
+  padding: 1rem;
+  color: #fff;
+}
+
+.discord-button {
+  background: linear-gradient(135deg, #5865f2, #404eed); /* discord-gradient */
+  color: #fff;                            /* text-white */
+  font-weight: 500;                       /* font-medium */
+  padding: 0.5rem 1rem;                   /* py-2 px-4 */
+  border-radius: 0.5rem;                  /* rounded-lg */
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;   /* transition-opacity duration-200 */
+}
+
+.discord-button:hover {
+  opacity: 0.9; /* hover:opacity-90 */
 }

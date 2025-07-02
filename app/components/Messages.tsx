@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import { MessageSquare, Trash, User } from 'lucide-react';
+import { MessageSquare, Trash } from 'lucide-react';
 
 interface Message {
   id: number;

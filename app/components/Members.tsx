@@ -1,7 +1,7 @@
 
 'use client'
 import React, { useState, useMemo } from 'react';
-import { Users, UserIcon, Trash } from 'lucide-react';
+import { Users, Trash } from 'lucide-react';
 
 interface Member {
   id: number;
